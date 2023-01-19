@@ -17,7 +17,6 @@ def init_connection():
 
 conn = init_connection()
 
-# Perform query.
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=2)
 def run_query(query):
@@ -28,8 +27,6 @@ def run_query(query):
     except psycopg2.ProgrammingError:
         st.success("Sucessfully Uploaded.")
         return None
-
-# conn.autocommit = True
 
 uploaded_files = st.file_uploader("Upload some file", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
@@ -51,16 +48,13 @@ for uploaded_file in uploaded_files:
 st.title('Uploaded')
 rows = run_query("SELECT * from image_cap;")
 df = pd.read_sql_query("SELECT * FROM image_cap", conn)
-# Print results.
-# for row in rows:
-#     st.write(f"{row[0]}       {row[1]}           {row[2]}")
+
 st.table(df)
 
 st.title('Table of media')
 
-for i in range(0,len(df['picture']),2): # number of rows in your table! = 2
-    cols = st.columns(2) # number of columns in each row! = 2
-    # first column of the ith row
+for i in range(0,len(df['picture']),2): 
+    cols = st.columns(2) 
     try: 
         cols[0].image(f'{df.picture[i]}', use_column_width=True)
         cols[0].text(f'{df.prediction[i]}')
