@@ -52,6 +52,8 @@ pip install -r requirements.txt
 
 ### Connect Streamlit to PostgreSQL
 Read this document from Streamlit: https://docs.streamlit.io/knowledge-base/tutorials/databases/postgresql#add-username-and-password-to-your-local-app-secrets. Then go to pgAminIII, press _Add the connection to server_ and fill this form.
+
+
 ![image](https://user-images.githubusercontent.com/79329526/213474760-fb74bf0c-52b5-4f75-a098-9cfceb068756.png)
 
 In .streamlit/secrets.toml file. Change these information to YOUR PostgreSQL information. 
@@ -72,5 +74,5 @@ streamlit run web.py
 
 Here is the demo: 
 <video width="320" height="240" controls>
-  <source src="model/demo_image_captioning.webm">
+  <source src="model/demo_image_captioning.webm" type="video/mp4>
 </video>
