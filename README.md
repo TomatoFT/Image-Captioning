@@ -71,3 +71,6 @@ streamlit run web.py
 ```
 
 Here is the demo: 
+<video width="320" height="240" controls>
+  <source src="model/demo_image_captioning.webm">
+</video>
