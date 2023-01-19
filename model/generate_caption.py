@@ -7,7 +7,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.applications import efficientnet
 from tensorflow.keras.layers import TextVectorization
-from transformer_cnn import *
+from model.transformer_cnn import *
 vocab = vectorization.get_vocabulary()
 
 index_lookup = dict(zip(range(len(vocab)), vocab))

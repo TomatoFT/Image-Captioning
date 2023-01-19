@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import numpy as np
 from PIL import Image
-from app import *
+from model.generate_caption import *
 import datetime
 import psycopg2
 import pandas as pd
