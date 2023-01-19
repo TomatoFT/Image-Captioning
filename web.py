@@ -39,12 +39,12 @@ for uploaded_file in uploaded_files:
     location = f'Upload/{uploaded_file.name}'
     with open(os.path.join("Upload",uploaded_file.name),"wb") as f: 
       f.write(uploaded_file.getbuffer()) 
-    pred_caption = generate_caption(uploaded_file.name)
+    pred_caption = generate_caption(location)
     query = f"INSERT INTO image_cap VALUES ('{uploaded_file.name}', '{location}', '{pred_caption}');"
     data = run_query(query)
     print(query)
     print(type(bytes_data))
-    st.image(uploaded_file.name)
+    st.image(location)
     st.write(pred_caption)
 
 st.title('Uploaded')
