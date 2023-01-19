@@ -81,4 +81,8 @@ https://user-images.githubusercontent.com/79329526/213480883-1d2a87f9-b72a-4475-
 conda deactivate
 ```
 ## Note
-Feel free to clone my code to use. 
+Training model file is here: https://colab.research.google.com/drive/1K2ZFaAUNIYV0L92XEsV56HSYaXi4DMDh?usp=sharing. I use this file to train model and save its weights to local computer to deploy in Streamlit (You can find it at model/model_IC.h5).
+
+The model tutorial: https://keras.io/examples/vision/image_captioning/
+
+Feel free to clone my code to use.
