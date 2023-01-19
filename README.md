@@ -85,4 +85,6 @@ Training model file is here: https://colab.research.google.com/drive/1K2ZFaAUNIY
 
 The model tutorial: https://keras.io/examples/vision/image_captioning/
 
+You can read the submitted report to understand the process I do this project.
+
 Feel free to clone my code to use.
