@@ -13,9 +13,8 @@
 An image captioning system typically consists of two main components:
 
 <li>An image feature extractor: This component is responsible for extracting features from the input image, such as object locations, sizes, and colors.
-A natural language generator: This component takes the image features as input and generates a natural language description of the image. The image feature extractor can be a pre-trained convolutional neural network (CNN) such as ResNet, Inception, or VGG. These networks are trained on large image datasets, such as ImageNet, to recognize various objects and scenes in images.
 
-<li>The natural language generator can be a Recurrent Neural Network (RNN) or a transformer network such as GPT-2 or BERT that is trained to generate text based on the input image features.</li>
+<li>A natural language generator: This component takes the image features as input and generates a natural language description of the image.</li>
 
 <li>The generated captions are typically evaluated using metrics such as BLEU, METEOR, ROUGE, and CIDEr.</li>
 
