@@ -7,7 +7,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.applications import efficientnet
 from tensorflow.keras.layers import TextVectorization
-from model import *
+from transformer_cnn import *
 vocab = vectorization.get_vocabulary()
 
 index_lookup = dict(zip(range(len(vocab)), vocab))
@@ -36,17 +36,10 @@ sample_img_embed = caption_model.cnn_model(sample_x, training=False)
 sample_enc_out = caption_model.encoder(sample_img_embed, training=False)
 caption_model.decoder(sample_y, sample_enc_out, training=False)
 print(caption_model.layers)
-caption_model.load_weights("model_IC.h5")
+caption_model.load_weights("model/model_IC.h5")
 
-# Save the model as a saved model
-# tf.saved_model.save(caption_model, "model_IC")
-
-# caption_model = tf.saved_model.load('model_IC')
 
 def generate_caption(file):
-    # Select a random image from the validation dataset
-    # sample_img = cv2.imread('dog.jpg')
-    # sample_img = cv2.resize(sample_img, (299,299))
 
     # Read the image from the disk
     sample_img = decode_and_resize(file)

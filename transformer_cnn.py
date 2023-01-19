@@ -122,7 +122,7 @@ def load_captions_data(filename):
 
 
 # Load the dataset
-captions_mapping, text_data = load_captions_data("Flickr8k.token.txt")
+captions_mapping, text_data = load_captions_data("model/Flickr8k.token.txt")
 
 
 def custom_standardization(input_string):
