@@ -26,7 +26,7 @@ def run_query(query):
             cur.execute(query)
             return cur.fetchall()
     except psycopg2.ProgrammingError:
-        st.warning("Sucessfully Uploaded.")
+        st.success("Sucessfully Uploaded.")
         return None
 
 # conn.autocommit = True
@@ -46,6 +46,7 @@ for uploaded_file in uploaded_files:
     print(type(bytes_data))
     st.image(location)
     st.write(pred_caption)
+    st.write('____________________________________________________________________________________________')
 
 st.title('Uploaded')
 rows = run_query("SELECT * from image_cap;")
