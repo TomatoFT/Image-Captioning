@@ -72,7 +72,14 @@ database="postgres"
 streamlit run web.py
 ```
 
-Here is the demo: 
-<video width="320" height="240" controls>
-  <source src="model/demo_image_captioning.webm" type="video/mp4>
-</video>
+### Demo
+
+https://user-images.githubusercontent.com/79329526/213480883-1d2a87f9-b72a-4475-a32a-1c4ca119afbb.mp4
+
+### Exit Anaconda Environment
+
+```
+conda deactivate
+```
+## Note
+Feel free to clone my code to use. 
